@@ -45,31 +45,31 @@ namespace probandoboton.Controllers
             
         }
 
-        [HttpPost]
+        //[HttpPost]
 
-        public IActionResult login([FromBody] User uc)
-        {
+        //public IActionResult login([FromBody] User uc)
+        //{
             
-            if (!string.IsNullOrEmpty(uc.Clave))
-            {
+        //    if (!string.IsNullOrEmpty(uc.Clave))
+        //    {
                 
-                uc.Clave = Encriptados.ConvertSha256(uc.Clave);
-            }
-            var usuario = _auc.prueba.Where(s => s.Usuario == uc.Usuario && s.Clave == uc.Clave);
+        //        uc.Clave = Encriptados.ConvertSha256(uc.Clave);
+        //    }
+        //    var usuario = _auc.prueba.Where(s => s.Usuario == uc.Usuario && s.Clave == uc.Clave);
 
-            if (usuario.Any())
-            {
-               return Ok("Login Exitoso");
-            }
-            else
-            {
-                return Unauthorized("Login Incorrecto");
-            }
+        //    if (usuario.Any())
+        //    {
+        //       return Ok("Login Exitoso");
+        //    }
+        //    else
+        //    {
+        //        return Unauthorized("Login Incorrecto");
+        //    }
             
            
 
 
-        }
+        //}
 
         [HttpGet]
 
