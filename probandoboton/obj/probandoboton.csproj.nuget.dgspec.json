@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\COLSA\\Desktop\\borrar\\boton-registro-main\\probandoboton\\probandoboton.csproj": {}
+    "C:\\Users\\COLSA\\Source\\Repos\\AppTaxi\\probandoboton\\probandoboton.csproj": {}
   },
   "projects": {
-    "C:\\Users\\COLSA\\Desktop\\borrar\\boton-registro-main\\probandoboton\\probandoboton.csproj": {
+    "C:\\Users\\COLSA\\Source\\Repos\\AppTaxi\\probandoboton\\probandoboton.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\COLSA\\Desktop\\borrar\\boton-registro-main\\probandoboton\\probandoboton.csproj",
+        "projectUniqueName": "C:\\Users\\COLSA\\Source\\Repos\\AppTaxi\\probandoboton\\probandoboton.csproj",
         "projectName": "probandoboton",
-        "projectPath": "C:\\Users\\COLSA\\Desktop\\borrar\\boton-registro-main\\probandoboton\\probandoboton.csproj",
+        "projectPath": "C:\\Users\\COLSA\\Source\\Repos\\AppTaxi\\probandoboton\\probandoboton.csproj",
         "packagesPath": "C:\\Users\\COLSA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\COLSA\\Desktop\\borrar\\boton-registro-main\\probandoboton\\obj\\",
+        "outputPath": "C:\\Users\\COLSA\\Source\\Repos\\AppTaxi\\probandoboton\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\COLSA\\AppData\\Roaming\\NuGet\\NuGet.Config",

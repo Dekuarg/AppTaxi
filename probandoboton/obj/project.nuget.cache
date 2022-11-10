@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hx+13f/0JvWC8EMceL5NBsqYD6ynxfX08HT2lveAfn5Vs2dtKineDQMX3x0cAR95xlo/57ziZe97ax7KjN513g==",
+  "dgSpecHash": "BQYSS19R3DNWQaZ2KwLFYc/BQE324SIXlbGy6fU6SO49KfB7AIejk+KbrlOZNxY0hEQ7gh7d36gi4dKRBQxq2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\COLSA\\Desktop\\borrar\\boton-registro-main\\probandoboton\\probandoboton.csproj",
+  "projectFilePath": "C:\\Users\\COLSA\\Source\\Repos\\AppTaxi\\probandoboton\\probandoboton.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\COLSA\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\COLSA\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
