@@ -209,3 +209,6 @@ C:\Users\COLSA\Desktop\borrar\boton-registro-main\probandoboton\bin\Debug\net6.0
 C:\Users\COLSA\Desktop\borrar\boton-registro-main\probandoboton\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\COLSA\Desktop\borrar\boton-registro-main\probandoboton\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\COLSA\Desktop\borrar\boton-registro-main\probandoboton\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\COLSA\Desktop\borrar\boton-registro-main\probandoboton\bin\Debug\net6.0\MailKit.dll
+C:\Users\COLSA\Desktop\borrar\boton-registro-main\probandoboton\bin\Debug\net6.0\MimeKit.dll
+C:\Users\COLSA\Desktop\borrar\boton-registro-main\probandoboton\bin\Debug\net6.0\NETCore.MailKit.dll
