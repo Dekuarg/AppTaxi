@@ -4,6 +4,8 @@ using probandoboton.Helpers;
 namespace probandoboton.Controllers
 {
     public class CorreoController : Controller
+        //Controlador utilizado para generar el envio de un correo al usuario 
+        // para confirmar su mail y para recuperar contraseña
     {
         private string areglorandom = HelperMail.devolver();
         public IActionResult Index()
@@ -24,6 +26,8 @@ namespace probandoboton.Controllers
         }
 
         [HttpPost]
+        // Metodo utilizado para comparar el codigo enviado al usuario con el que coloca en la aplicacion
+
         public IActionResult Compare([FromBody] int[] arreglo)
         {
             char[] newarray;
@@ -33,7 +37,6 @@ namespace probandoboton.Controllers
             if (arreglo.SequenceEqual(arraypass))
             {
                 return Ok("Comparacion Correcta");
-
             }
             else
             {

@@ -14,4 +14,5 @@ namespace probandoboton.Models
 
         public string Token { get; set; }
     }
+
 }

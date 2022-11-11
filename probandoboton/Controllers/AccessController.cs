@@ -6,6 +6,7 @@ using MySqlX.XDevAPI;
 namespace probandoboton.Controllers
 {
     public class AccessController : Controller
+        //Controlador que utilizamos para el registro de usuario y su login.
     {
         private readonly ApplicationUser _auc;
 
@@ -72,7 +73,7 @@ namespace probandoboton.Controllers
         //}
 
         [HttpGet]
-
+         
         public IActionResult Getlogin([FromBody] User uc)
         {
            

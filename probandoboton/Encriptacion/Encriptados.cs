@@ -22,7 +22,9 @@ namespace probandoboton.Encriptacion
 
 
         //}
-
+         
+        // Metodo que se utiliza para encriptar la contraseña 
+        // el metodo de arriba genera encriptaciones diferentes para computadora no usar hasta encontrar una semilla util
         public static String ConvertMD5(String texto)
         {
             MD5CryptoServiceProvider x = new MD5CryptoServiceProvider();

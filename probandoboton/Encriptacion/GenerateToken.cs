@@ -11,12 +11,12 @@ namespace probandoboton.Encriptacion
     {
         public static string Token(User user)
         {
-            // generate token valido por 7 dias 
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes("this is my custom Secret key for authentication");
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[] { new Claim("Clave", user.Clave.ToString(), "Usuario", user.Usuario.ToString()) }),
+                // generate token valido por 7 dias 
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
