@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using probandoboton.Encriptacion;
 using probandoboton.Models;
 
 namespace probandoboton.Controllers
@@ -26,6 +27,20 @@ namespace probandoboton.Controllers
             else
             {
                 return NotFound("Token no encontrado");
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Consult([FromBody] string token)
+        {
+            if (!string.IsNullOrEmpty(token))
+            {
+
+                return Ok(GenerateToken.ValidateToken(token));
+            }
+            else
+            {
+                return BadRequest("token no encontrado");
             }
 
         }

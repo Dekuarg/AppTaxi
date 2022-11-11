@@ -22,9 +22,25 @@ namespace probandoboton.Encriptacion
 
 
         //}
-         
+
         // Metodo que se utiliza para encriptar la contraseña 
-        // el metodo de arriba genera encriptaciones diferentes para computadora no usar hasta encontrar una semilla util
+        // el metodo de arriba genera encriptaciones diferentes para cada computadora no usar hasta encontrar una semilla util
+
+        public static string GetSHA256(string str)
+        {
+            SHA256 sha256 = SHA256.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = sha256.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
+
+        }
+
+
+
+
         public static String ConvertMD5(String texto)
         {
             MD5CryptoServiceProvider x = new MD5CryptoServiceProvider();

@@ -9,8 +9,12 @@ namespace probandoboton.Helpers
         {
             this.configuration = configuration;
         }
-        private MailMessage ConfigureMail
-            (string destinatario, string mensaje)
+        private MailMessage ConfigureMail(string destinatario, string mensaje)
+        // Armado de como seran los mails que se enviaran(todos seran iguales) y constan de:
+        // From: quien lo envia
+        // To: para quien va dirigido
+        // Subject: El asunto
+        // Body: El mensaje que en este caso serian los 5 numeros aleatorios.
         {
             string from = this.configuration.GetValue<string>("MailSettings:user");
             MailMessage mail = new MailMessage();
@@ -23,6 +27,8 @@ namespace probandoboton.Helpers
         }
 
         private void ConfigureSmtp(MailMessage mail)
+        // Configuracion del emisor de los mails que se van a generar en este caso seria "aplicaciontaxi4679@gmail.com".
+        // Esta informacion se encuentra en appsettings.json.
         {
             string user =
                 this.configuration.GetValue<string>("MailSettings:user");
@@ -43,6 +49,7 @@ namespace probandoboton.Helpers
         }
 
         public void SendMail(string destinatario, string mensaje)
+        // Metodo que se utiliza para enviar el mail.
         {
             MailMessage mail = this.ConfigureMail(destinatario, mensaje);
             this.ConfigureSmtp(mail);
@@ -50,7 +57,7 @@ namespace probandoboton.Helpers
 
         public static string devolver()
         {
-            //con esta funcion lo que hacemos es devolver un string con los numeros aleatorios que vamos a utilizar para confirmar el mail y para recuperar contraseña
+            //Con esta funcion lo que hacemos es devolver un string con los numeros aleatorios que vamos a utilizar para confirmar el mail y para recuperar contraseña
             int[] vector = new int[5];
             Random rand = new Random();
             for (int i = 0; i < vector.Length; i++) 

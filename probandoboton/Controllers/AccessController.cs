@@ -32,7 +32,7 @@ namespace probandoboton.Controllers
             {
                 success = true;
                 uc.Token = GenerateToken.Token(uc);
-                uc.Clave = Encriptados.ConvertMD5(uc.Clave); 
+                uc.Clave = Encriptados.GetSHA256(uc.Clave); 
             }
             else
             {
@@ -79,8 +79,7 @@ namespace probandoboton.Controllers
            
             if (!string.IsNullOrEmpty(uc.Clave))
             {
-                
-                uc.Clave = Encriptados.ConvertMD5(uc.Clave);
+                uc.Clave = Encriptados.GetSHA256(uc.Clave);
             }
             var usuario = _auc.prueba.Where(s => s.Usuario == uc.Usuario && s.Clave == uc.Clave);
 
