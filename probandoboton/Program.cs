@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using probandoboton.Helpers;
 using probandoboton.Models;
 using System.Configuration;
 
@@ -7,9 +8,8 @@ var connectionString = builder.Configuration.GetConnectionString("Datapriv");
 builder.Services.AddDbContext<ApplicationUser>(mysqlBuilder => mysqlBuilder.UseMySQL(connectionString));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//
 builder.Services.AddDistributedMemoryCache();
-//
+builder.Services.AddScoped<HelperMail, HelperMail>();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromSeconds(1800);

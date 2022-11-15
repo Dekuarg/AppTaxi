@@ -16,8 +16,8 @@ namespace probandoboton.Encriptacion
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[] { new Claim("Clave", user.Clave.ToString(), "Usuario", user.Usuario.ToString()) }),
-                // generate token valido por 7 dias 
-                Expires = DateTime.UtcNow.AddDays(7),
+                // generate token valido por 15 minutos. 
+                Expires = DateTime.UtcNow.AddMinutes(15),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

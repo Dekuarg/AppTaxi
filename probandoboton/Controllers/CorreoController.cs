@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using probandoboton.Helpers;
+using probandoboton.Models;
 
 namespace probandoboton.Controllers
 {
@@ -18,10 +19,13 @@ namespace probandoboton.Controllers
             this.helpermail = helpermail;
         }
         [HttpPost]
-        public IActionResult Index([FromBody] string receptor, string texto)
+        public IActionResult Send([FromBody] CorreoOnly correo)
         {
-            string mensajefinal = "ingrese este codigo en su aplicacion" + areglorandom;
-            this.helpermail.SendMail(receptor, mensajefinal);
+            if (!correo.IsValid())
+                return NotFound();
+
+            string mensajefinal = "ingrese este codigo en su aplicacion " + areglorandom;
+            this.helpermail.SendMail(correo.Destinatario, mensajefinal);
             return Ok("okaaaa");
         }
 
