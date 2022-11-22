@@ -23,7 +23,6 @@ namespace probandoboton.Controllers
         {
             if (!correo.IsValid())
                 return NotFound();
-
             string mensajefinal = "ingrese este codigo en su aplicacion " + areglorandom;
             this.helpermail.SendMail(correo.Destinatario, mensajefinal);
             return Ok("okaaaa");
